@@ -1,3 +1,17 @@
 body {
     background: linear-gradient(135deg, #aee5ec, #e8b460)
 }
+
+.chondog img{
+    padding-top:25px;
+    margin-bottom:25px;
+    margin-left:150px;
+    max-width: 100%;
+    width:65px;
+    height:65px;
+}
+
+.header{
+    background-color: bisque;
+    padding-top: 25px
+}
