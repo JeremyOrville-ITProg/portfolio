@@ -3,8 +3,12 @@
     font-family: 'Technor-Bold';
     src: url('/resources/fonts/Technor-Bold.woff2') format('woff2');
 }
+@font-face{
+    font-family: 'Technor-Black';
+    src: url('/resources/fonts/Technor-Black.woff2') format('woff2');
+}
 
-* {
+*:not(.logo-text) {
     font-family: 'Technor-Bold';
 }
 
@@ -16,15 +20,29 @@ body {
     background-repeat: no-repeat;
 }
 
+.chondog{
+    display: inline-flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
 .chondog img{
-    float:left;
-    padding-top:10px;
-    padding-left:185px;
-    margin-bottom: 10px;
     width:65px;
     height:65px;
 }
 
+.logo-text{
+    margin-left:10px;
+    font-size:25px;
+    color: black;
+    font-family: 'Technor-Black';
+}
+
+.name{
+    margin:5px;
+}
 .header{
     background-color: bisque;
     padding-top: 25px
@@ -64,6 +82,75 @@ nav ul li a{
     text-transform:uppercase;
     text-decoration:none;
 }
+
+/*Burger Styling */
+.burger{
+    display:none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 940px) {
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        display: none;
+        float: none;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+    }
+
+    .navigation.active ul {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    .burger {
+        display: block; /*burger*/
+    }
+
+    .chondog img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+}
+
+
 
 /* ATTACHMENT REACTIVE STYLING */
 
