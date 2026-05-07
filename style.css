@@ -7,8 +7,11 @@
     font-family: 'Technor-Black';
     src: url('/resources/fonts/Technor-Black.woff2') format('woff2');
 }
-
-*:not(.logo-text) {
+@font-face{
+    font-family: 'Technor-Medium';
+    src: url('/resources/fonts/Technor-Medium.woff2') format('woff2');
+}
+*:not(.logo-text,.name,.subheading) {
     font-family: 'Technor-Bold';
 }
 
@@ -40,6 +43,20 @@ body {
     font-family: 'Technor-Black';
 }
 
+.name{
+    font-family: 'Technor-Black';
+    font-size: 50px;
+
+}
+.subheading{
+    font-family: 'Technor-Medium';
+    font-size:24px;
+}
+.tagline{
+    font-family: 'Technor-Medium';
+    font-size:16px;
+}
+
 /* NAVIGATION BAR STYLING */
 .navigation{
     padding: 0;
@@ -55,19 +72,16 @@ body {
     border-radius: 10px;
     z-index: 100;
 }
-
 nav ul{
     float:right;
     margin-right:185px;
     margin-top: 20px;
 }
-
 nav li{
     display:inline-block;
     line-height:45px;
     margin: 0 5px;
 }
-
 nav ul li a{
     color: black;
     font-size:15px;
@@ -80,7 +94,6 @@ nav ul li a{
     display:none;
     cursor: pointer;
 }
-
 .bar {
     display: block;
     width: 25px;
@@ -89,7 +102,6 @@ nav ul li a{
     background-color: black;
     transition: 0.3s;
 }
-
 @media screen and (max-width: 940px) {
     .navigation {
         display: flex;
@@ -151,7 +163,6 @@ a{
     text-decoration: none;
     transition:0.5s;
 }
-
 a:hover{
     color:rgb(214, 154, 79);
     text-decoration:none;
@@ -164,7 +175,6 @@ a:hover{
     justify-content: space-between;
     padding:100px;
 }
-
 .text{
     flex:1;
 }
@@ -177,11 +187,9 @@ a:hover{
     flex:1;
     transition: transform 0.3s ease;
 }
-
 .profilepic:hover{
     transform: translateY(-10px);
 }
-
 @media (max-width:940px){
     .container{
         flex-direction: column;
@@ -189,10 +197,16 @@ a:hover{
     }
 
     .profilepic{
+        opacity:0;
+        transform: scale(0.9);
+        pointer-events: none;
         width:80%;
-        max-width:320px;
-        height:auto;
-        transform: none;
-        opacity:1;
     }
+}
+
+/*imagebuttons*/
+.audio{
+    width:50px;
+    height:50px;
+    padding-left:75px;
 }

@@ -6,3 +6,9 @@ if (burger && navigation) {
         navigation.classList.toggle('active');
     });
 };
+
+function playAudio(){
+    var x = document.getElementById("bgm");
+    x.play();
+    x.volume = 0.2;
+}
