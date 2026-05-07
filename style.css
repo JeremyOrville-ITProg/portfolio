@@ -1,3 +1,4 @@
+/* FONT DECLARATION */
 @font-face{
     font-family: 'Technor-Bold';
     src: url('/resources/fonts/Technor-Bold.woff2') format('woff2');
@@ -17,8 +18,9 @@ body {
 
 .chondog img{
     float:left;
-    padding-top:20px;
+    padding-top:10px;
     padding-left:40px;
+    margin-bottom: 10px;
     width:65px;
     height:65px;
 }
@@ -35,11 +37,17 @@ body {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    position:sticky;
+    top:0;
+    background: rgba(214, 154, 79, 0.2);
+    backdrop-filter: blur(10px);
+    overflow: auto;
 }
 
 nav ul{
     float:right;
     margin-right:60px;
+    margin-top: 20px;
 }
 
 nav li{
@@ -55,7 +63,7 @@ nav ul li a{
     text-decoration:none;
 }
 
-/* REACTIVE STYLING */
+/* ATTACHMENT REACTIVE STYLING */
 
 a{
     color:black;
