@@ -1,5 +1,7 @@
 body {
-    background: linear-gradient(135deg, #aee5ec, #e8b460)
+    background: linear-gradient(135deg, #aee5ec 0%, #e8b460 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .chondog img{
