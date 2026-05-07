@@ -43,6 +43,7 @@ body {
     backdrop-filter: blur(10px);
     overflow: auto;
     border-radius: 10px;
+    z-index: 100;
 }
 
 nav ul{
@@ -84,15 +85,34 @@ a:hover{
     justify-content: space-between;
     padding:100px;
 }
+
+.text{
+    flex:1;
+}
 /*image styling*/
 .profilepic{
     width:475px;
-    height:475px;
+    max-width: 100%;
+    height:auto;
     border-radius:25px;
-
+    flex:1;
     transition: transform 0.3s ease;
 }
 
 .profilepic:hover{
     transform: translateY(-10px);
+}
+
+@media (max-width:768px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profilepic{
+        opacity:0;
+        transform: scale(0.9);
+        pointer-events: none;
+        width:80%;
+    }
 }
