@@ -1,3 +1,14 @@
+@font-face{
+    font-family: 'Technor-Bold';
+    src: url('/resources/fonts/Technor-Bold.woff2') format('woff2');
+}
+
+* {
+    font-family: 'Technor-Bold';
+}
+
+
+
 body {
     background: linear-gradient(135deg, #aee5ec 0%, #e8b460 100%);
     background-attachment: fixed;
@@ -5,10 +16,9 @@ body {
 }
 
 .chondog img{
-    padding-top:25px;
-    margin-bottom:25px;
-    margin-left:150px;
-    max-width: 100%;
+    float:left;
+    padding-top:20px;
+    padding-left:40px;
     width:65px;
     height:65px;
 }
@@ -16,4 +26,44 @@ body {
 .header{
     background-color: bisque;
     padding-top: 25px
+}
+
+/* NAVIGATION BAR STYLING */
+.navigation{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav ul{
+    float:right;
+    margin-right:60px;
+}
+
+nav li{
+    display:inline-block;
+    line-height:45px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: black;
+    font-size:20px;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+
+/* REACTIVE STYLING */
+
+a{
+    color:black;
+    text-decoration: none;
+    transition:0.5s;
+}
+
+a:hover{
+    color:rgb(214, 154, 79);
+    text-decoration:none;
 }
