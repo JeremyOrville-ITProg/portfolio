@@ -1,4 +1,4 @@
-/* FONT DECLARATION */
+/* Project Styling */
 @font-face{
     font-family: 'Technor-Bold';
     src: url('/resources/fonts/Technor-Bold.woff2') format('woff2');
@@ -15,6 +15,23 @@
     font-family: 'Technor-Bold';
 }
 
+html{
+    scroll-behavior: smooth;
+}
+/* */
+
+
+/* Hides scrollbar */
+*::-webkit-scrollbar{
+    display:none;
+}
+
+*{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* */
+
 
 /*Body Styling*/
 body {
@@ -22,7 +39,10 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+/* */
 
+
+/*home styling*/
 .chondog{
     display: inline-flex;
     align-items: center;
@@ -56,6 +76,8 @@ body {
     font-family: 'Technor-Medium';
     font-size:16px;
 }
+/* */
+
 
 /* NAVIGATION BAR STYLING */
 .navigation{
@@ -64,7 +86,8 @@ body {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    position:sticky;
+    min-width:100vw;
+    position:fixed;
     top:0;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -153,7 +176,7 @@ nav ul li a{
         margin-left: 8px;
     }
 }
-
+/* */
 
 
 /* ATTACHMENT REACTIVE STYLING */
@@ -173,16 +196,38 @@ a:hover{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding:100px;
+    padding:40px 80px;
+    min-height:100vh;
+    box-sizing: border-box;
 }
 .text{
     flex:1;
 }
+/* ABOUT ME PAGE */
+.about{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+
+    padding:80px;
+    box-sizing:border-box;
+    border-top: 2px solid rgba(255,255,255,0.2)
+}
+
+.about h1{
+    font-family: 'Technor-Black';
+    font-size: 48px;
+}
+
+
+
 /*image styling*/
 .profilepic{
     width:475px;
-    max-width: 100%;
+    max-width: 45%;
+    max-height: 80vh;
     height:auto;
+    object-fit: cover;
     border-radius:25px;
     flex:1;
     transition: transform 0.3s ease;
@@ -205,8 +250,17 @@ a:hover{
 }
 
 /*imagebuttons*/
-.audio{
-    width:50px;
-    height:50px;
+.player{
+    width:45px;
+    height:45px;
     padding-left:75px;
+}
+
+
+
+/*footer settings*/
+.footer{
+    position:sticky;
+    bottom:0;
+    min-height: 5em;
 }
