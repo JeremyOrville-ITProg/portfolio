@@ -17,3 +17,8 @@ function playAudio(){
         bgm.pause();
     }
 }
+
+function bark(){
+    var bark = document.getElementById("bark");
+        bark.play();
+}

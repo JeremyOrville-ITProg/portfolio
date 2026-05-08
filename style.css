@@ -38,6 +38,7 @@ body {
     background: linear-gradient(135deg, #aee5ec 0%, #e8b460 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
+    padding-top:40px;
 }
 /* */
 
@@ -66,6 +67,10 @@ body {
 .name{
     font-family: 'Technor-Black';
     font-size: 50px;
+    background-image: linear-gradient(90deg,rgba(8, 8, 7, 1) 0%, rgba(54, 125, 119, 1) 50%, rgba(23, 23, 22, 1) 100%);
+    --webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
 
 }
 .subheading{
@@ -132,7 +137,7 @@ nav ul li a{
         justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
-        position: sticky;
+        position: fixed;
         top: 0;
         left: 0;
         background: rgba(255, 255, 255, 0.2);
@@ -208,7 +213,9 @@ a:hover{
     min-height:100vh;
     display:flex;
     flex-direction: column;
-
+    flex-wrap:nowrap;
+    width:100%;
+    gap:40px;
     padding:80px;
     box-sizing:border-box;
     border-top: 2px solid rgba(255,255,255,0.2)
@@ -216,25 +223,82 @@ a:hover{
 
 .about h1{
     font-family: 'Technor-Black';
-    font-size: 48px;
+    font-size: 28px;
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 1) 26%, rgba(54, 125, 119, 1) 90%);
+    --webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+    padding-top:25px;
+}
+
+.aboutbox{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+.aboutleft{
+    flex: 1;
+}
+.aboutright{
+    flex: 1;
+    min-height: 300px;
+    max-height:100vh;
+    background-color: rgba(255,255,255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+.aboutright h4{
+    font-family: 'Technor-Bold';
+    font-size: 32px;
+    margin-top: 2px;
+    padding:32px;
+}
+.aboutright p{
+    font-family: 'Technor-Bold';
+    font-size: 28px;
+    padding-left:30px;
+}
+
+.self{
+    font-family:'Technor-Medium';
+    font-size: 32px;
+}
+.goal{
+    font-family:'Technor-Medium';
+    font-size: 30px;
+    opacity: 70%;
 }
 
 
 
 /*image styling*/
+.profilecontainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 .profilepic{
-    width:475px;
-    max-width: 45%;
+    width:80vh;
+    max-width: 80%;
     max-height: 80vh;
     height:auto;
     object-fit: cover;
     border-radius:25px;
-    flex:1;
     transition: transform 0.3s ease;
 }
 .profilepic:hover{
     transform: translateY(-10px);
 }
+.hint{
+    margin-top:10px;
+    font-size:10px;
+    opacity:0.1;
+}
+
 @media (max-width:940px){
     .container{
         flex-direction: column;
@@ -246,6 +310,9 @@ a:hover{
         transform: scale(0.9);
         pointer-events: none;
         width:80%;
+    }
+    .hint{
+        opacity:0;
     }
 }
 
