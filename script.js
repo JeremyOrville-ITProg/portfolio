@@ -8,7 +8,12 @@ if (burger && navigation) {
 };
 
 function playAudio(){
-    var x = document.getElementById("bgm");
-    x.play();
-    x.volume = 0.2;
+    var bgm = document.getElementById("bgm");
+
+    if (bgm.paused){
+        bgm.play();
+        bgm.volume = 0.1;
+    } else{
+        bgm.pause();
+    }
 }

@@ -8,6 +8,7 @@
 </head>
 <body>
     <script src="script.js" defer></script>
+    <section>
     <nav id="navigation" class="navigation">
         <a href="index.html" class="chondog">
             <img src="resources/images/chondog.png">
@@ -25,20 +26,24 @@
             <li><a href="">Credits</a></li>
         </ul>
     </nav>
+    </section>
 
-    <div class="container">
-        <div class="text">
-            <h1 class="name">Jeremy Orville Batac</h1>
-            <p class="subheading">Hello, I'm an aspiring developer from <b>Cavite, Philippines.</b></p>
-            <p class="tagline">IT Student learning new tricks🐾</p>
+        <div class="container">
+            <div class="text">
+                <h1 class="name">Jeremy Orville Batac</h1>
+                <p class="subheading">Hello, I'm an aspiring developer from <b>Cavite, Philippines.</b></p>
+                <p class="tagline">IT Student learning new tricks🐾</p>
+            </div>
+
+            <img src="./resources/images/jeremy.png" class="profilepic">
         </div>
+    
 
-        <img src="./resources/images/jeremy.png" class="profilepic">
-    </div>
-
+    <div class="footer">
     <audio id="bgm" loop>
         <source src="/resources/audio/Ending C.mp3" type="audio/mpeg">
     </audio>
-    <img class="audio" onclick="playAudio()" src="/resources/images/music.png">
+    <img class="player" onclick="playAudio()" src="/resources/images/music.png">
+    </div>
 </body>
 </html>
