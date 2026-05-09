@@ -18,6 +18,8 @@
 html{
     scroll-behavior: smooth;
 }
+
+
 /* */
 
 
@@ -35,10 +37,36 @@ html{
 
 /*Body Styling*/
 body {
+    position:relative;
     background: linear-gradient(135deg, #aee5ec 0%, #e8b460 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding-top:40px;
+}
+
+.pattern-overlay {
+    position: fixed;
+    inset: 0;
+
+    background-image: url('/resources/images/pawtreat-white.png');
+    background-size: cover;
+    background-position: center;
+
+    pointer-events: none;
+
+    opacity: 0.5;
+
+    mask-image: radial-gradient(
+        circle 50px at var(--x) var(--y),
+        black 0%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        circle 50px at var(--x) var(--y),
+        black 0%,
+        transparent 100%
+    );
 }
 /* */
 
@@ -273,8 +301,27 @@ a:hover{
     opacity: 70%;
 }
 
-
-
+/*Projects Section*/
+.projects{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    width:100%;
+    gap:40px;
+    padding:80px;
+    box-sizing:border-box;
+    border-top: 2px solid rgba(255,255,255,0.2)
+}
+.projects h4{
+    font-family: 'Technor-Black';
+    font-size: 24px;
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 1) 26%, rgba(54, 125, 119, 1) 90%);
+    --webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+    padding-top:25px;
+}
 /*image styling*/
 .profilecontainer{
     display:flex;
