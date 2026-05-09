@@ -22,3 +22,8 @@ function bark(){
     var bark = document.getElementById("bark");
         bark.play();
 }
+
+document.addEventListener("mousemove", (e) => {
+    document.documentElement.style.setProperty("--x", e.clientX + "px");
+    document.documentElement.style.setProperty("--y", e.clientY + "px");
+});

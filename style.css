@@ -53,8 +53,8 @@ body {
     background-position: center;
 
     pointer-events: none;
-
-    opacity: 0.5;
+    z-index:-1;
+    opacity: 1;
 
     mask-image: radial-gradient(
         circle 50px at var(--x) var(--y),
