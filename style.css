@@ -1,4 +1,6 @@
-/* Project Styling */
+/*================
+=Project Styling=
+===============*/
 @font-face{
     font-family: 'Technor-Bold';
     src: url('/resources/fonts/Technor-Bold.woff2') format('woff2');
@@ -24,7 +26,9 @@ html{
 /* */
 
 
-/* Hides scrollbar */
+/*================
+=Hides scrollbar=
+===============*/
 *::-webkit-scrollbar{
     display:none;
 }
@@ -36,7 +40,9 @@ html{
 /* */
 
 
-/*Body Styling*/
+/*=============
+=Body Styling=
+===========*/
 body {
     position:relative;
     background: linear-gradient(135deg, #aee5ec 0%, #e8b460 100%);
@@ -72,7 +78,9 @@ body {
 /* */
 
 
-/*home styling*/
+/*=============
+=home styling=
+===========*/
 .chondog{
     display: inline-flex;
     align-items: center;
@@ -112,7 +120,9 @@ body {
 }
 
 
-/* Calls to Action */
+/*================
+=Calls to Action=
+==============*/
 .ctabuttons{
     display:flex;
     gap: 1rem;
@@ -145,7 +155,9 @@ body {
 /* */
 
 
-/* NAVIGATION BAR STYLING */
+/*=======================
+=NAVIGATION BAR STYLING=
+=====================*/
 .navigation{
     padding: 0;
     margin: 0;
@@ -178,7 +190,9 @@ nav ul li a{
     text-decoration:none;
 }
 
-/*Burger Styling */
+/*====================
+===Burger Styling ===
+==================*/
 .burger{
     display:none;
     cursor: pointer;
@@ -246,7 +260,9 @@ nav ul li a{
 /* */
 
 
-/* ATTACHMENT REACTIVE STYLING */
+/*=============================
+==ATTACHMENT REACTIVE STYLING=
+===========================*/
 
 a{
     color:black;
@@ -271,7 +287,9 @@ a:hover{
     flex:1;
 }
 
-/* ABOUT ME PAGE */
+/*==============
+ ABOUT ME PAGE 
+ ===============*/
 .about{
     min-height:100vh;
     display:flex;
@@ -341,37 +359,44 @@ a:hover{
 .skills{
     display:flex;
     flex-direction: column;
-    gap:1.5rem;
+    gap:2rem;
+    align-items: flex-start;
 }
 .soft{
-    text-align: center;
+    text-align: left;
     font-size:1.8rem;
 }
 .skillrow{
     display:flex;
     gap:3rem;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    align-items: flex-start;
 }
 .skillbox{
     display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0.5rem;
+    min-width: 180px;
+}
+.skilldesc{
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-family: 'Technor-Medium';
+    font-size: 0.9rem;
+    gap:4rem;
+    max-width: 140px;
 }
 .icon:not(#team){
-    height: 4rem;
-    width: 4rem;
+    height: clamp(2.5rem, 6vw, 4rem);
+    width: clamp(2.5rem, 6vw, 4rem);
     object-fit: contain;
     
 }
 #team{
-    height: 5rem;
-    width: 6rem;
-}
-.skilldesc{
-    white-space: nowrap;
-    text-align: center;
-    font-family: 'Technor-Medium';
-    font-size: 0.85rem;
-    gap:4rem;
+    height: clamp(2.5rem, 8vw, 6rem);
+    width: clamp(2.5rem, 8vw, 6rem);
 }
 @media screen and (max-width:940px){
     .about{
@@ -397,7 +422,19 @@ a:hover{
         line-height: 1.6;
         text-align: center;
     }
-
+    .skills{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width:100%;
+    }
+    .skillbox{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     .aboutright{
         padding: 1.5rem;
         min-height: auto;
@@ -419,7 +456,9 @@ a:hover{
     }
 }
 
-/*Projects Section*/
+/*=======================
+====Projects Section====
+======================*/
 .projects{
     min-height:100vh;
     display:flex;
@@ -560,7 +599,9 @@ a:hover{
 }
 
 
-/*image styling*/
+/*==================
+===image styling===
+=================*/
 .profilecontainer{
     display:flex;
     flex-direction: column;
@@ -586,7 +627,9 @@ a:hover{
 }
 
 
-/*This is for the Hero Section*/
+/*=============================
+=This is for the Hero Section=
+===========================*/
 @media (max-width:940px){
     .container{
         flex-direction: column;
@@ -632,7 +675,9 @@ a:hover{
     }
 }
 
-/*imagebuttons*/
+/*================
+==imagebuttons===
+==============*/
 .player{
     width:45px;
     height:45px;
@@ -641,7 +686,9 @@ a:hover{
 
 
 
-/*footer settings*/
+/*==================
+==footer settings==
+=================*/
 .footer{
     position:sticky;
     bottom:0;
