@@ -277,6 +277,7 @@ a:hover{
 .text{
     flex:1;
 }
+
 /* ABOUT ME PAGE */
 .about{
     min-height:100vh;
@@ -341,7 +342,51 @@ a:hover{
     font-size: 1.875rem;
     opacity: 70%;
 }
+@media screen and (max-width:940px){
+    .about{
+        padding: 4rem 1.5rem;
+        gap: 2rem;
+    }
+    .aboutbox{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .aboutleft,.aboutright{
+        width:100%;
+    }
 
+    .self{
+        font-size: 1.4rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+    .goal{
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .aboutright{
+        padding: 1.5rem;
+        min-height: auto;
+    }
+
+    .aboutright h4{
+        font-size: 1.5rem;
+        padding:0;
+        margin-bottom: 1rem;
+        text-align:center;
+    }
+
+    .aboutright p{
+        font-size: 1rem;
+        padding-left: 0;
+        line-height: 1.5;
+        text-align: center;
+        word-break: break-word;
+    }
+}
 /*Projects Section*/
 .projects{
     min-height:100vh;
