@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="pattern-overlay"></div>
-    <script src="script.js" defer></script>
     <section>
         <nav id="navigation" class="navigation">
             <a href="#home" class="chondog">
@@ -34,6 +33,10 @@
                 <h1 class="name">Jeremy Orville Batac</h1>
                 <p class="subheading">Hello, I'm an aspiring developer from <b>Cavite, Philippines.</b></p>
                 <p class="tagline">IT Student learning new tricks🐾</p>
+                <div class="ctabuttons">
+                    <button class="cta1">SEE MY WORK!</button>
+                    <button class="cta2">CONTACT ME!</button>
+                </div>
             </div>
             <div class="profilecontainer">
                 <img onclick="bark()" src="./resources/images/jeremy.png" class="profilepic" id="profilepic">
@@ -66,12 +69,56 @@
 
     <section class="projects" id="projects">
         <h4>Projects</h4>
+        <p>A collection of projects I have lead and developed.</p>
         <div class="projectgrid">
             <div class="projectcard">
+                <div class="imagewrap">
+                    <img src="/resources/images/cinemaxstatic.png"
+                    class="project-preview"
+                    data-static="/resources/images/cinemaxstatic.png"
+                    data-active="/resources/images/cinemaxactive.gif"
+                    >
+                </div>
 
+                <div class="overlay">
+                    
+                </div>
+
+                <div class="cardcontent">
+                    <h2 class="projectname">Cinemax GUI</h2>
+                    <span class="projectdesc">A Cinema Booking System for Tickets, Seats, and Snacks, with Database Functionality</span>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Swing</span>
+                    <span class="tag">SQL</span>
+                </div>
             </div>
+
             <div class="projectcard">
-                
+                <div class="imagewrap">
+                    <img
+                     src="/resources/images/placeholder.png" class="project-preview"
+                     data-static="/resources/images/placeholder.png"
+                     data-active="/resources/images/cinemaxactive.gif"
+                     >
+                </div>
+
+                <div class="overlay">
+                    
+                </div>
+
+                <div class="cardcontent">
+                    <h2 class="projectname">Digital Portfolio</h2>
+                    <span class="projectdesc">A Website Portfolio, made to showcase my Web Development Skills, made with a touch of personality.</span>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Javascript</span>
+                </div>
             </div>
             <div class="projectcard">
                 
@@ -84,7 +131,8 @@
     <audio id="bgm" loop>
         <source src="/resources/audio/Ending C.mp3" type="audio/mpeg">
     </audio>
-    <img class="player" onclick="playAudio()" src="/resources/images/music.png">
+    <img class="player" onclick="playAudio()" src="/resources/images/music-icon.png">
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
