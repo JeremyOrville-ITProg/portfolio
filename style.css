@@ -21,8 +21,6 @@
 html{
     scroll-behavior: smooth;
 }
-
-
 /* */
 
 
@@ -388,6 +386,7 @@ a:hover{
         word-break: break-word;
     }
 }
+
 /*Projects Section*/
 .projects{
     min-height:100vh;
@@ -554,6 +553,8 @@ a:hover{
     opacity:0.1;
 }
 
+
+/*This is for the Hero Section*/
 @media (max-width:940px){
     .container{
         flex-direction: column;
