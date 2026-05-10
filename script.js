@@ -31,6 +31,8 @@ document.addEventListener("mousemove", (e) => {
     document.documentElement.style.setProperty("--y", e.clientY + "px");
 });
 
+
+//Project Card Flair//
 const previews = document.querySelectorAll(".project-preview");
 
 previews.forEach((img) =>{
