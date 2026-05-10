@@ -408,7 +408,6 @@ a:hover{
     opacity:0;
     transition: 0.5s ease;
 
-    pointer-events: none;
 }
 .overlay a{
     text-decoration: none;

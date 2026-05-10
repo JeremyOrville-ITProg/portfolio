@@ -33,18 +33,20 @@ document.addEventListener("mousemove", (e) => {
 
 
 //Project Card Flair//
-const previews = document.querySelectorAll(".project-preview");
+const cards = document.querySelectorAll(".projectcard");
 
-previews.forEach((img) =>{
+cards.forEach((card) =>{
+
+    const img = card.querySelector(".projectpreview");
 
     const activeSrc = img.dataset.active;
     const staticSrc = img.dataset.static;
     
-    img.addEventListener("mouseenter", () => {
+    card.addEventListener("mouseenter", () => {
         img.src = activeSrc;
     });
 
-    img.addEventListener("mouseleave", () => {
+    card.addEventListener("mouseleave", () => {
         img.src = staticSrc;
     });
 });
