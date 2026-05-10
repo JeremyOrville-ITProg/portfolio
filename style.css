@@ -303,7 +303,9 @@ a:hover{
 }
 
 .aboutleft{
+    display:flex;
     flex: 1;
+    flex-direction: column;
 }
 .aboutright{
     flex: 1;
@@ -334,6 +336,34 @@ a:hover{
     font-family:'Technor-Medium';
     font-size: 1.875rem;
     opacity: 70%;
+}
+
+.skills{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:4rem;
+    margin-top:1.5rem;
+}
+.skillbox{
+    display:flex;
+}
+.icon:not(#team){
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    
+}
+#team{
+    height: 5rem;
+    width: 6rem;
+}
+.skilldesc{
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Technor-Medium';
+    font-size: 0.85rem;
 }
 @media screen and (max-width:940px){
     .about{
