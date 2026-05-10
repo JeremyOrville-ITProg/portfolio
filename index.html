@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="pattern-overlay"></div>
-    <section>
+    <div class="pattern-overlay"></div> <!--Just here for my overlay-->
+
+    <!--Navigation Bar-->
+    <section> 
         <nav id="navigation" class="navigation">
             <a href="#home" class="chondog">
                 <img src="resources/images/jeremydog.png">
@@ -27,6 +29,8 @@
             </ul>
         </nav>
     </section>
+
+    <!--Home Section-->
     <section class="home" id="home">
         <div class="container">
             <div class="text">
@@ -34,8 +38,12 @@
                 <p class="subheading">Hello, I'm an aspiring developer from <b>Cavite, Philippines.</b></p>
                 <p class="tagline">IT Student learning new tricks🐾</p>
                 <div class="ctabuttons">
+                    <a href="#projects">
                     <button class="cta1">SEE MY WORK!</button>
-                    <button class="cta2">CONTACT ME!</button>
+                    </a>
+                    <a href="#contact">
+                    <button class="cta2" href="#contact">CONTACT ME!</button>
+                    </a>
                 </div>
             </div>
             <div class="profilecontainer">
@@ -46,6 +54,7 @@
         </div>
     </section>
 
+    <!--About Section-->
     <section class="about" id="about">
         <h1>About Me</h1>
         <div class="aboutbox">
@@ -67,11 +76,13 @@
         </div>
     </section>
 
+    <!--Projects Section-->
     <section class="projects" id="projects">
         <h4>Projects</h4>
         <p>A collection of projects I have lead and developed (Most are collaborative works).</p>
         <div class="projectgrid">
 
+            <!--First Card-->
             <div class="projectcard">
                 <div class="imagewrap">
                     <img src="/resources/images/cinemaxstatic.png"
@@ -95,7 +106,7 @@
                 </div>
             </div>
 
-
+            <!--Second Card-->
             <div class="projectcard">
                 <div class="imagewrap">
                     <img
@@ -119,7 +130,7 @@
                 </div>
             </div>
 
-
+            <!--Third Card-->
             <div class="projectcard">
                 <div class="imagewrap">
                     <img
@@ -143,6 +154,7 @@
                 </div>
             </div>
 
+            <!--Fourth Card-->
             <div class="projectcard">
                 <div class="imagewrap">
                     <img
@@ -168,7 +180,7 @@
         </div>
     </section>
     
-
+    <!--Footer-->
     <div class="footer">
     <audio id="bgm" loop>
         <source src="/resources/audio/Ending C.mp3" type="audio/mpeg">
