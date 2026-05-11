@@ -222,19 +222,34 @@ nav ul li a{
     }
 
     nav ul {
-        display: none;
-        float: none;
+        display: flex;
+        
         flex-direction: column;
         width: 100%;
         margin: 0;
         padding: 0;
+
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 10px;
+
+        overflow:hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-5px);
+
+        transition:
+            max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+
+        pointer-events: none;
     }
 
     .navigation.active ul {
-        display: flex;
+        max-height: 300px;
+        opacity:1;
+        transform: translateY(0);
+
+        pointer-events: auto;
     }
 
     nav li {
