@@ -50,3 +50,55 @@ cards.forEach((card) =>{
         img.src = staticSrc;
     });
 });
+
+//Plays swipeup/down depending on if current section is lower/higher than target section type shi//
+
+const swipeup = document.getElementById("swipeup");
+const swipedown = document.getElementById("swipedown");
+
+swipeup.volume = 0.1;
+swipedown.volume = 0.1;
+
+const navLinks = document.querySelectorAll('a[href^="#"]');
+
+navLinks.forEach(link =>{
+    link.addEventListener("click", function (){
+        const targetId = this.getAttribute("href");
+
+        //ignores empty links
+        if (!targetId || targetId === "#") return;
+
+        const targetSection = document.querySelector(targetId);
+
+        if (!targetSection) return;
+
+
+        //current scroll pos
+        const currentScroll = window.scrollY;
+
+        //target section pos
+        const targetScroll = targetSection.offsetTop;
+
+        //stops both sounds
+        swipeup.pause();
+        swipedown.pause();
+
+
+        //Always resets audio to not stack sounds.//
+        swipeup.currentTime = 0;
+        swipedown.currentTime = 0;
+
+        //Compares section if higher or lower, then decides which audio to play.//
+        if (targetScroll > currentScroll){
+            swipedown.play();
+        } else if (targetScroll < currentScroll){
+            swipeup.play();
+        }
+    });
+});
+
+
+//plays sound when dropdown menu is clicked (for mobile screens)
+burger.addEventListener('click',()=>{
+
+})
