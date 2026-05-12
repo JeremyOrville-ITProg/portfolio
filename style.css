@@ -22,9 +22,26 @@
 }
 html{
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 /* */
 
+/*===============
+==Progress Bar==
+=============*/
+.progressbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+
+    background: linear-gradient(90deg,#367d77,#e8b460);
+    backdrop-filter: blur(10px);
+    border-radius: 0 10px 10px 0;
+    z-index: 999;
+    transition: width 0.1s linear;
+}
 
 /*================
 =Hides scrollbar=
