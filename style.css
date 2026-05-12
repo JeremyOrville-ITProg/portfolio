@@ -613,6 +613,61 @@ a:hover{
     
 }
 
+/*==================
+==Contact Styling==
+================*/
+.contact{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    width:100%;
+    gap:2.5rem;
+    padding:5rem;
+    box-sizing:border-box;
+    border-top: 2px solid rgba(255,255,255,0.2)
+}
+
+.contact h4{
+    font-family: 'Technor-Black';
+    font-size: 24px;
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 1) 26%, rgba(54, 125, 119, 1) 90%);
+    --webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+    padding-top:25px;
+}
+.contact p{
+    font-family: 'Technor-Medium';
+    font-size: 1rem;
+    margin-top: -65px;
+    opacity:0.9;
+    white-space: nowrap;
+}
+
+/*==================
+==Credits Section==
+================*/
+.credits{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    width:100%;
+    gap:2.5rem;
+    padding:5rem;
+    box-sizing:border-box;
+    border-top: 2px solid rgba(255,255,255,0.2)
+}
+.credits h4{
+    font-family: 'Technor-Black';
+    font-size: 24px;
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 1) 26%, rgba(54, 125, 119, 1) 90%);
+    --webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+    padding-top:25px;
+}
 
 /*==================
 ===image styling===
