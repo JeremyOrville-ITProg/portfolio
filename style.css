@@ -529,13 +529,37 @@ a:hover{
     backdrop-filter: blur(16px);
     background: var(--card);
     border-radius: 24px;
-    transition: 0.35s ease;
+    transition:transform 0.15s ease;
     padding-bottom: 1rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
-.projectcard:hover{
-    transform: translateY(-5px);
+.projectcard::after{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255,255,255,0.15),
+        transparent 70%
+    );
+
+    opacity:0;
+    transition: opacity 0.3s;
+    pointer-events:none;
+}
+
+.projectcard:hover::after{
+    opacity:1;
+}
+
+.cardcontent, .tags, .imagewrap{
+    transform:translateZ(40px)
 }
 
 .overlay{
