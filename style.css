@@ -331,34 +331,44 @@ a:hover{
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2.5rem;
+    gap: 2rem;
     width: 100%;
+    flex-wrap:wrap;
 }
 
 .aboutleft{
-    display:flex;
-    flex: 1;
-    flex-direction: column;
+    flex: 1 1 600px;
+    min-width: 320px;
 }
 .aboutright{
-    flex: 1;
-    min-height: 18.75rem;
-    max-height:100vh;
+    flex: 1 1 350px;
+    min-width: 300px;
+
     background-color: rgba(255,255,255, 0.15);
     backdrop-filter: blur(12px);
     border-radius: 25px;;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    padding: 2rem;
+    align-self: flex-start;
 }
-.aboutright h4{
+.aboutright h3{
     font-family: 'Technor-Bold';
-    font-size: 2rem;
-    margin-top: 2px;
-    padding:1.875rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+
+    margin-bottom: 1rem;
+
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 1) 26%, rgba(54, 125, 119, 1) 90%);
+    --webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
 }
 .aboutright p{
     font-family: 'Technor-Bold';
-    font-size: 1.75rem;
-    padding-left:2rem;
+    font-size: clamp(1rem, 1.5vw, 1.35rem);
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    word-break:break-word;
 }
 
 .self{
@@ -383,7 +393,8 @@ a:hover{
 }
 .skillrow{
     display:flex;
-    gap:3rem;
+    flex-wrap: wrap;
+    gap:2rem;
     align-items: flex-start;
 }
 .skillbox{
@@ -413,6 +424,7 @@ a:hover{
     height: clamp(2.5rem, 8vw, 6rem);
     width: clamp(2.5rem, 8vw, 6rem);
 }
+
 @media screen and (max-width:940px){
     .about{
         padding: 4rem 1.5rem;
