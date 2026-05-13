@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="progressbar"></div>
     <div class="pattern-overlay"></div> <!--Just here for my overlay-->
 
     <!--Navigation Bar-->
@@ -22,6 +23,7 @@
                 <span class="bar"></span>
             </div>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -49,7 +51,10 @@
             </div>
             <div class="profilecontainer">
                 <img onclick="bark()" src="./resources/images/jeremy.png" class="profilepic" id="profilepic">
-                <audio class="bark" id="bark" src="/resources/audio/minecraftdog.mp3"></audio>
+                <audio class="bark" id="bark" src="./resources/audio/minecraftdog.mp3"></audio>
+                <audio id="bark1" src="./resources/audio/bark1.mp3"></audio>
+                <audio id="bark2" src="./resources/audio/bark2.mp3"></audio>
+                <audio id="bark3" src="./resources/audio/bark3.mp3"></audio>
                 <p class="hint">Click me ^</p>
             </div>
         </div>
@@ -210,7 +215,15 @@
     
     <section class="contact" id="contact">
         <h4>Contact Me!</h4>
-        <p>You can directly contact me through these channels.</p>
+        <p>Lets work together! You can directly contact me through these channels.</p>
+        <div class="contactcontainer">
+            <div class="contactbox">
+                <div class="contacticon">
+                    <div class="contactdetails">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 

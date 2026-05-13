@@ -18,6 +18,49 @@ function playAudio(){
         bgm.pause();
     }
 }
+// Progress Bar //
+const progress = document.querySelector(".progressbar");
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+
+    const docHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const progressPercent =
+        (scrollTop / docHeight) * 100;
+
+    progress.style.width =
+        `${progressPercent}%`;
+});
+
+//profile pic hover plays sound (1 of 3 sounds)
+const profilepic = document.getElementById("profilepic")
+
+const barks = [document.getElementById("bark1"),document.getElementById("bark2"),document.getElementById("bark3")];
+
+barks.forEach(sound =>{
+    sound.volume = 0.1;
+});
+
+let barkcd = false;
+
+profilepic.addEventListener("mouseenter", () =>{
+    if (barkcd) return;
+    barkcd = true;
+
+    const randombark = barks[Math.floor(Math.random() * barks.length)];
+
+    randombark.currentTime = 0;
+
+    randombark.play();
+
+    setTimeout(() =>{
+        barkcd = false;
+    }, 300);
+})
 
 // Bark //
 function bark(){
