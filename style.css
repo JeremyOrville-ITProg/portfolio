@@ -49,7 +49,6 @@ html{
 *::-webkit-scrollbar{
     display:none;
 }
-
 *{
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -67,7 +66,6 @@ body {
     background-repeat: no-repeat;
     padding-top:40px;
 }
-
 .pattern-overlay {
     position: fixed;
     inset: 0;
@@ -105,19 +103,16 @@ body {
     padding-top: 10px;
     margin-bottom: 15px;
 }
-
 .chondog img{
     width:65px;
     height:65px;
 }
-
 .logo-text{
     margin-left:10px;
     font-size:25px;
     color: black;
     font-family: 'Technor-Black';
 }
-
 .name{
     font-family: 'Technor-Black';
     font-size: 50px;
@@ -148,27 +143,27 @@ body {
     line-height: 2vh;
     white-space: normal;
 }
-
 .cta1, .cta2{
     background:rgba(255,255,255,0.3);
     font-size:1rem;
     border-radius:15px;
     transition: transform 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     padding: 0.9rem 1.4rem;
     display:inline-flex;
     align-items:center;
     justify-content: center;
 }
-
-
 .cta1:hover{
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    filter:brightness(1.05);
 }
 .cta2:hover{
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    filter:brightness(1.05);
 }
-
 /* */
 
 
@@ -222,7 +217,6 @@ nav ul li a{
     background-color: black;
     transition: 0.3s;
 }
-
 @media screen and (max-width: 940px) {
     .navigation {
         display: flex;
@@ -295,7 +289,6 @@ nav ul li a{
 /*=============================
 ==ATTACHMENT REACTIVE STYLING=
 ===========================*/
-
 a{
     color:black;
     text-decoration: none;
@@ -333,7 +326,6 @@ a:hover{
     box-sizing:border-box;
     border-top: 2px solid rgba(255,255,255,0.2)
 }
-
 .about h1{
     font-family: 'Technor-Black';
     font-size: 1.75rem;
@@ -343,7 +335,6 @@ a:hover{
     color: transparent;
     padding-top:1.5rem;
 }
-
 .aboutbox{
     display:flex;
     justify-content: space-between;
@@ -352,7 +343,6 @@ a:hover{
     width: 100%;
     flex-wrap:wrap;
 }
-
 .aboutleft{
     flex: 1 1 600px;
     min-width: 320px;
@@ -387,7 +377,6 @@ a:hover{
     margin-bottom: 0.6rem;
     word-break:break-word;
 }
-
 .self{
     font-family:'Technor-Medium';
     font-size: 2rem;
@@ -397,7 +386,6 @@ a:hover{
     font-size: 1.875rem;
     opacity: 70%;
 }
-
 .skills{
     display:flex;
     flex-direction: column;
@@ -441,7 +429,6 @@ a:hover{
     height: clamp(2.5rem, 8vw, 6rem);
     width: clamp(2.5rem, 8vw, 6rem);
 }
-
 @media screen and (max-width:940px){
     .about{
         padding: 4rem 1.5rem;
@@ -514,7 +501,6 @@ a:hover{
     box-sizing:border-box;
     border-top: 2px solid rgba(255,255,255,0.2)
 }
-
 .projects h4{
     font-family: 'Technor-Black';
     font-size: 24px;
@@ -553,7 +539,6 @@ a:hover{
     transform-style: preserve-3d;
     will-change: transform;
 }
-
 .projectcard::after{
     content:'';
     position:absolute;
@@ -570,15 +555,12 @@ a:hover{
     transition: opacity 0.3s;
     pointer-events:none;
 }
-
 .projectcard:hover::after{
     opacity:1;
 }
-
 .cardcontent, .tags, .imagewrap{
     transform:translateZ(40px)
 }
-
 .overlay{
     position:absolute;
     inset:0;
@@ -601,8 +583,6 @@ a:hover{
     padding: 0.8rem 1.2rem;
     border-radius: 12px;
 }
-
-
 .projectcard:hover .overlay{
     opacity: 1;
 }
@@ -622,7 +602,6 @@ a:hover{
     font-size:1rem;
     font-family:'Technor-Medium';
 }
-
 .imagewrap{
     position:relative;
     overflow:hidden;
@@ -637,7 +616,6 @@ a:hover{
 .imagewrap:hover img{
     transform: scale(1.05);
 }
-
 .tags{
     display:flex;
     flex-wrap: wrap;
@@ -669,18 +647,6 @@ a:hover{
 /*==================
 ==Contact Styling==
 ================*/
-.contact{
-    min-height:100vh;
-    display:flex;
-    flex-direction: column;
-    flex-wrap:nowrap;
-    width:100%;
-    gap:2.5rem;
-    padding:5rem;
-    box-sizing:border-box;
-    border-top: 2px solid rgba(255,255,255,0.2)
-}
-
 .contact h4{
     font-family: 'Technor-Black';
     font-size: 24px;
@@ -690,13 +656,138 @@ a:hover{
     color: transparent;
     padding-top:25px;
 }
-.contact p{
+.contact > p{
     font-family: 'Technor-Medium';
     font-size: 1rem;
-    margin-top: -65px;
+    margin-top: -30px;
     opacity:0.9;
     white-space: nowrap;
+
+    text-align: center;
 }
+.contact{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center;
+    width:100%;
+    gap:0.2rem;
+    padding:6rem 5%;
+    box-sizing:border-box;
+    border-top: 2px solid rgba(255,255,255,0.2)
+}
+
+.contactcontainer{
+    width: 100%;
+    max-width:1200px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap:4rem;
+    flex-wrap: wrap;
+}
+/*LEFT SIDE OF CONTAINER*/
+.contactinfo{
+    display: flex;
+    flex: 1 1 350px;
+    flex-direction: column;
+    gap:1.5rem;
+}
+.contactbox{
+    display:flex;
+    align-items: center;
+    padding:1rem 1.2rem;
+
+    background: rgba(255,255,255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    min-height: 90px;
+}
+.contactdetails{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0.35rem;
+}
+.contactdetails h3{
+    margin-bottom: 0.3rem;
+    font-size:1.2rem;
+    line-height: 1.2;
+}
+.contactdetails p{
+    margin:0;
+    font-size:1rem;
+    opacity:0.8;
+    text-align: left;
+    line-height: 1.4;
+}
+/*RIGHT SIDE OF CONTAINER*/
+.contactform{
+    flex: 1 1 500px;
+    background: rgba(255,255,255, 0.2);
+    backdrop-filter: blur(10px);
+    padding:2rem;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.contactform h2{
+    margin-bottom: 1.5rem;
+}
+.inputbox{
+    position:relative;
+    width:100%;
+    margin-top: 1rem;
+}
+.inputbox input, .inputbox textarea{
+    width:100%;
+    padding:1rem 1.2rem;
+    border:none;
+    outline:none;
+    background: rgba(255,255,255,0.3);
+    font-size:1rem;
+    resize:none;
+    box-sizing: border-box;
+}
+.inputbox textarea{
+    min-height:120px;
+    font-family:'Technor-Medium';
+}
+.inputbox span{
+    display:block;
+    margin-top: 0.5rem;
+    font-size:0.9rem;
+    opacity: 0.7;
+}
+.send{
+    width:100%;
+    padding:1rem 1.2rem;
+    border:none;
+    border-radius: 12px;
+    cursor:pointer;
+
+    font-size: 1rem;
+    font: 'Technor-Bold';
+    background: linear-gradient(90deg,rgba(232, 180, 96, 1) 0%, rgba(54, 125, 119, 0.35) 50%, rgba(232, 180, 96, 1) 100%);
+    color:white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.send:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    filter:brightness(1.05);
+}
+.send:active{
+    transform: translateY(0px);
+}
+
+
+
 
 /*==================
 ==Credits Section==
@@ -721,6 +812,52 @@ a:hover{
     color: transparent;
     padding-top:25px;
 }
+.credits h3{
+    margin-top: -70px;
+    font-size: 16px;
+    opacity:0.8;
+}
+.creditscontainer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:2rem;
+    padding:2rem;
+
+    background:rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius:12px;
+}
+.cbox1{
+    flex: 1;
+}
+.cbox2{
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.cbox2 img{
+    width:100%;
+    max-width:350px;
+    border-radius:10px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3)
+}
+.credits p{
+    font-family: 'Technor-Medium';
+}
+
+@media(max-width:940px){
+    .creditscontainer{
+        flex-direction: column;
+        text-align:center;
+    }
+    .cbox2 img{
+        max-width:250px;
+    }
+}
+
 
 /*==================
 ===image styling===
